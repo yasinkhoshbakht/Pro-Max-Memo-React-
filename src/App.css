@@ -1,0 +1,36 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f4f8;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+.app-container {
+  display: flex;
+  padding: 20px;
+  margin-top: 80px;
+  box-sizing: border-box;
+  height: calc(100vh - 80px);
+}
+.leftSection {
+  width: 20%; 
+  background-color: #f9f9f9;
+  padding: 20px;
+  overflow-y: auto;
+}
+.rightSection {
+  width: 80%;
+  background-color: #e0e0e0;
+  padding: 20px;
+  overflow-y: auto;
+}

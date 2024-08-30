@@ -1,0 +1,11 @@
+header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
