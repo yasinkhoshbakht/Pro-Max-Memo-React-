@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./MemoForm.css";
+
 function MemoForm({ setMemos }) {
   let [title, setTitle] = useState("");
   let [text, setText] = useState("");
+
   let submitHandler = (e) => {
     e.preventDefault();
     let newMemo = {
@@ -16,6 +18,7 @@ function MemoForm({ setMemos }) {
     setTitle("");
     setText("");
   };
+
   return (
     <div>
       <form onSubmit={submitHandler}>

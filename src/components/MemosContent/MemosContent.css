@@ -1,0 +1,117 @@
+.memos-content {
+  padding: 20px;
+}
+.filter-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.filter-section label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+.memos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.memo-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  color: #333; /* Default text color */
+}
+.memo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.memo-card h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: inherit;
+}
+.memo-card p {
+  font-size: 14px;
+  color: inherit;
+  line-height: 1.5;
+}
+.memo-card small {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+.memo-footer {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.memo-footer input[type="checkbox"] {
+  accent-color: #4caf50;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.memo-footer input[type="checkbox"]:hover {
+  transform: scale(1.2);
+}
+.memo-footer label {
+  font-size: 14px;
+  color: #333;
+}
+.memo-card[style*="background-color: #FFB6C1"] {
+  color: #333;
+}
+.memo-card[style*="background-color: #87CEEB"] {
+  color: #333;
+}
+.memo-card[style*="background-color: #90EE90"] {
+  color: #333;
+}
+.memo-card[style*="background-color: #FFA07A"] {
+  color: #333;
+}
+.memo-card[style*="background-color: #9370DB"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #FFD700"] {
+  color: #333;
+}
+.memo-card[style*="background-color: #FF4500"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #8A2BE2"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #20B2AA"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #FF6347"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #4682B4"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #32CD32"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #6A5ACD"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #FF1493"] {
+  color: #fff;
+}
+.memo-card[style*="background-color: #D2691E"] {
+  color: #fff;
+}
