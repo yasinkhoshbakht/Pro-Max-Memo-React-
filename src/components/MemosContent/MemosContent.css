@@ -6,9 +6,10 @@
   padding: 10px;
   background-color: #f4f4f4;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(249, 234, 234, 0.1);
   display: flex;
   align-items: center;
+  width: 200px;
 }
 .filter-section label {
   font-size: 16px;
@@ -27,7 +28,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #e0e0e0;
-  color: #333; /* Default text color */
+  color: #333;
 }
 .memo-card:hover {
   transform: translateY(-5px);
@@ -69,49 +70,4 @@
 .memo-footer label {
   font-size: 14px;
   color: #333;
-}
-.memo-card[style*="background-color: #FFB6C1"] {
-  color: #333;
-}
-.memo-card[style*="background-color: #87CEEB"] {
-  color: #333;
-}
-.memo-card[style*="background-color: #90EE90"] {
-  color: #333;
-}
-.memo-card[style*="background-color: #FFA07A"] {
-  color: #333;
-}
-.memo-card[style*="background-color: #9370DB"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #FFD700"] {
-  color: #333;
-}
-.memo-card[style*="background-color: #FF4500"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #8A2BE2"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #20B2AA"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #FF6347"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #4682B4"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #32CD32"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #6A5ACD"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #FF1493"] {
-  color: #fff;
-}
-.memo-card[style*="background-color: #D2691E"] {
-  color: #fff;
 }
