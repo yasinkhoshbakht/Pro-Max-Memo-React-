@@ -1,25 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MemosContent.css";
 
 function MemosContent({ memos, setMemos }) {
-  let [showFinished, setShowFinished] = useState(false);
-  let isInitialMount = useRef(true);
+  const [showFinished, setShowFinished] = useState(false);
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+
   useEffect(() => {
-    if (isInitialMount.current) {
-      let savedMemos = localStorage.getItem("memos");
-      if (savedMemos) {
-        setMemos(JSON.parse(savedMemos));
-      }
-      isInitialMount.current = false;
+    const savedMemos = localStorage.getItem("memos");
+    if (savedMemos) {
+      setMemos(JSON.parse(savedMemos));
     }
+    setIsDataLoaded(true);
   }, [setMemos]);
   useEffect(() => {
-    if (!isInitialMount.current) {
+    if (isDataLoaded) {
       localStorage.setItem("memos", JSON.stringify(memos));
     }
-  }, [memos]);
-  let getRandomColor = () => {
-    let colors = [
+  }, [memos, isDataLoaded]);
+  const getRandomColor = () => {
+    const colors = [
       "#FFB6C1",
       "#87CEEB",
       "#90EE90",
@@ -38,16 +37,19 @@ function MemosContent({ memos, setMemos }) {
     ];
     return colors[Math.floor(Math.random() * colors.length)];
   };
-  let handleCheckboxChange = (id) => {
+
+  const handleCheckboxChange = (id) => {
     setMemos((prevMemos) =>
       prevMemos.map((memo) =>
         memo.id === id ? { ...memo, isFinished: !memo.isFinished } : memo
       )
     );
   };
-  let filteredMemos = showFinished
+
+  const filteredMemos = showFinished
     ? memos.filter((memo) => memo.isFinished)
     : memos;
+
   return (
     <div className="memos-content">
       <div className="filter-section">
@@ -62,7 +64,7 @@ function MemosContent({ memos, setMemos }) {
       </div>
       <div className="memos-container">
         {filteredMemos.map((memo) => {
-          let cardColor = getRandomColor();
+          const cardColor = getRandomColor();
           return (
             <div
               key={memo.id}
